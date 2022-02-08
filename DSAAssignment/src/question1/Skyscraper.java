@@ -23,10 +23,14 @@ public class Skyscraper {
 				System.out.println("Invalid Input.");
 				i--;
 				continue;
+			}else if(!aFloorSize.contains(a)) {
+				aFloorSize.add(a);
+				aSortedSize.add(a);
+			}else {
+				System.out.println("****Floor Size already present. Please re-enter size.****");
+				i--;
+				continue;
 			}
-			aFloorSize.add(a);
-			aSortedSize.add(a);
-
 		}
 		aSortedSize.sort(Comparator.reverseOrder());
 		System.out.println("The order of construction is as follows:-");
